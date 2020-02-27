@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.search(params[:search])
+    @microposts = Micropost.search(params[:search]).page(params[:page])
   end
 
   # GET /microposts/1
