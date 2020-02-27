@@ -7,9 +7,24 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="header" style="margin-bottom: 80px">
+      <div class="home-menu pure-menu pure-menu-horizontal pure-menu-fixed">
+          <a class="pure-menu-heading" href="">SimpleRails</a>
+
+          <ul class="pure-menu-list">
+              <li class="pure-menu-item"><a href="." class="pure-menu-link">Home</a></li>
+              <li class="pure-menu-item"><a href="./users" class="pure-menu-link">User</a></li>
+              <li class="pure-menu-item"><a href="./microposts" class="pure-menu-link">MicroPost</a></li>
+          </ul>
+      </div>
+    </div>
+    <div style="padding: 0 20px">
+      <%= yield %>
+    </div>
   </body>
 </html>

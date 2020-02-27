@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Microposts</h1>
 
 <%= form_tag microposts_path, method: :get do %>
@@ -7,7 +6,9 @@
   <%= submit_tag 'Search'%>
 <% end %>
 
-<table>
+<br/>
+
+<table class="pure-table">
   <thead>
     <tr>
       <th>Title</th>
