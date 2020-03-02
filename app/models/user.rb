@@ -2,6 +2,7 @@ class User < ApplicationRecord
   validates :name, presence: true;
   validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP };
   has_many :microposts
+  has_one_attached :avatar
 
   def self.search(search)
     if search
