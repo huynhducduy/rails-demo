@@ -54,3 +54,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 gem 'kaminari'
+gem "mini_magick"
+gem "image_processing"

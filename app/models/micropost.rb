@@ -1,6 +1,7 @@
 class Micropost < ApplicationRecord
   validates :content, presence: true, length: { minimum: 5};
   belongs_to :user
+  has_rich_text :content
 
   def self.search(search)
     if search
