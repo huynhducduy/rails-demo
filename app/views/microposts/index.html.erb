@@ -12,6 +12,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>Slug</th>
       <th>Content</th>
       <th>Images</th>
       <th>User</th>
@@ -24,6 +25,7 @@
     <% @microposts.each do |micropost| %>
       <tr>
         <td><%= micropost.title %></td>
+        <td><%= micropost.slug %></td>
         <td><%= micropost.content %></td>
         <td><% micropost.images.each do |image| %>
    <%= image_tag(image.variant(resize_to_limit: [100, 100])) %>
