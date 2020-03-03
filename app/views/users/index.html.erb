@@ -22,7 +22,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= image_tag(user.avatar) if user.avatar.attached? %></td>
+        <td><%= image_tag(user.avatar.variant(resize_to_limit: [100, 100])) if user.avatar.attached? %></td>
         <td><%= user.name %></td>
         <td><%= user.email %></td>
         <td><%= link_to 'Show', user %></td>
