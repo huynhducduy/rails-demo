@@ -4,7 +4,7 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.search(params[:search]).page(params[:page])
+    @microposts = Micropost.category(params[:category]).search(params[:search]).page(params[:page])
   end
 
   # GET /microposts/1
@@ -69,6 +69,6 @@ class MicropostsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def micropost_params
-      params.require(:micropost).permit(:title, :content, :user_id, :search, images: [])
+      params.require(:micropost).permit(:title, :content, :user_id, :category_id, :slug, :search, images: [])
     end
 end

@@ -17,6 +17,11 @@
   </div>
 
   <div class="field">
+    <%= form.label :slug %>
+    <%= form.text_field :slug %>
+  </div>
+
+  <div class="field">
     <%= form.label :content %>
     <%= form.rich_text_area :content %>
   </div>
@@ -29,6 +34,11 @@
   <div class="field">
     <%= form.label :user_id %>
     <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :category_id %>
+    <%= form.number_field :category_id %>
   </div>
 
   <div class="actions">
