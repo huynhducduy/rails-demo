@@ -3,6 +3,7 @@
 
 <%= form_tag microposts_path, method: :get do %>
   <%= text_field_tag :search, params[:search]%>
+  <%= text_field_tag :category, params[:category]%>
   <%= submit_tag 'Search'%>
 <% end %>
 
